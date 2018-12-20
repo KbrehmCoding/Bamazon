@@ -5,7 +5,7 @@ To Do
 create a Node application called bamazonCustomer.js. Running this application will first display all of the items available for sale. Include the ids, names, and prices of products for sale.
 
 
-Once the customer has placed the order, your application should check if your store has enough of the product to meet the customer's request.
+Once the customer has placed the order, your application should check if your store has enough of the product to meet the customer's request. (need to look more into how to do this part, I know how to update the table but not how to check its stock agasint the request being made by the customer)
 
 
 
