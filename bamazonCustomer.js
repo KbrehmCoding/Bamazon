@@ -12,3 +12,21 @@ var connection = mysql.createConnection({
     password: "",
     database: "bamazon_db"
 });
+
+function askId() {
+    inquirer
+        .prompt({
+            name: "id",
+            type: "input",
+            message: "Please enter the ID of the product you want to buy",
+        });
+}
+
+function askAmount() {
+    inquirer
+        .prompt({
+            name:"amount",
+            type: "input",
+            message: "How may would you like to buy?"
+        });
+}
