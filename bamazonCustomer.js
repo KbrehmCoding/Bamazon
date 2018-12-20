@@ -25,8 +25,26 @@ function askId() {
 function askAmount() {
     inquirer
         .prompt({
-            name:"amount",
+            name: "amount",
             type: "input",
             message: "How may would you like to buy?"
         });
 }
+.then(function (answer) {
+    connection.query(
+        "DELETE FROM products ?",
+        {
+            product_name: answer.product,
+            department_name: answer.department,
+            price: answer.price,
+            stock_quantity: answer.stock
+        },
+        function (err) {
+            if (err) throw err;
+            console.log("Your purchase was successfull!");
+            start();
+        }
+    );
+});
+}
+
