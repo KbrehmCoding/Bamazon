@@ -13,38 +13,39 @@ var connection = mysql.createConnection({
     database: "bamazon_db"
 });
 
-function askId() {
-    inquirer
-        .prompt({
-            name: "id",
-            type: "input",
-            message: "Please enter the ID of the product you want to buy",
-        });
-}
-
-function askAmount() {
-    inquirer
-        .prompt({
-            name: "amount",
-            type: "input",
-            message: "How may would you like to buy?"
-        });
-}
-.then(function (answer) {
-    connection.query(
-        "DELETE FROM products ?",
-        {
-            product_name: answer.product,
-            department_name: answer.department,
-            price: answer.price,
-            stock_quantity: answer.stock
+function buyItems() {
+    connection.query("SELECT * FROM products", function (err, results) {
+        if (err) throw err;
+            inquirer
+                .prompt({
+                    name: "id",
+                    type: "input",
+                    message: "Please enter the ID of the product you want to buy",
+                });
         },
-        function (err) {
-            if (err) throw err;
-            console.log("Your purchase was successfull!");
-            start();
+        function askAmount() {
+            inquirer
+                .prompt({
+                    name: "amount",
+                    type: "input",
+                    message: "How may would you like to buy?"
+                });
         }
-    );
-});
-}
 
+.then(function (answer) {
+            connection.query(
+                "DELETE FROM products ?",
+                {
+                    product_name: answer.product,
+                    department_name: answer.department,
+                    price: answer.price,
+                    stock_quantity: answer.stock
+                },
+                function (err) {
+                    if (err) throw err;
+                    console.log("Your purchase was successfull!");
+                    start();
+                }
+            );
+        }))
+    }
