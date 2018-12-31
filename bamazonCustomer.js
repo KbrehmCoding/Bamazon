@@ -28,13 +28,13 @@ function buyItems() {
                 .prompt({
                     name: "amount",
                     type: "input",
-                    message: "How may would you like to buy?"
+                    message: "How many would you like to buy?"
                 });
         })
 if(amount<stock_quantity) {
-            "UPDATE
+            "UPDATE"
         }
-ok so I know that this is not what I need to do, I need to decrese the stock_quanitiy integer not delete the whole row, this is just a place holder for now
+// ok so I know that this is not what I need to do, I need to decrese the stock_quanitiy integer not delete the whole row, this is just a place holder for now
 .then(function (answer) {
             connection.query(
                 // TODO look up how to decrement mysql using js"",
