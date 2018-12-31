@@ -30,15 +30,15 @@ function buyItems() {
                     type: "input",
                     message: "How may would you like to buy?"
                 });
+        })
+if(amount<stock_quantity) {
+            "UPDATE
         }
-
+ok so I know that this is not what I need to do, I need to decrese the stock_quanitiy integer not delete the whole row, this is just a place holder for now
 .then(function (answer) {
             connection.query(
-                "DELETE FROM products ?",
+                // TODO look up how to decrement mysql using js"",
                 {
-                    product_name: answer.product,
-                    department_name: answer.department,
-                    price: answer.price,
                     stock_quantity: answer.stock
                 },
                 function (err) {
