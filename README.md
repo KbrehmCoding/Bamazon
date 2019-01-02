@@ -1,6 +1,14 @@
 # Bamazon
+https://kbrehmcoding.github.io/Bamazon/
 
-To Do
+User Instructions:
+you will need to install the node applications inquirer, mysql, and dotenv
+this is a command line app so you will need to navigate into the bamazonCustomer.js file to use it
+use the command node bamazonCustomer.js to start the program
+type in the id number for the item you want to buy
+type in a quantity (if it is too high you will ge t a message saying Insuffiencent Quantity)
+after you have done this the myswl table will update the stock_quantity
+thank you.
 
 my thought process:
     will need variables for the product ID, stock quantity, price, order quantity, and the total cost
