@@ -3,12 +3,14 @@
 To Do
 
 my thought process:
-    will need variables for the product ID, stock quantity, price, and the total cost
+    will need variables for the product ID, stock quantity, price, order quantity, and the total cost
     in order to display all the items available for sale, I will need to
         access the mysql table
         retrieve all the data
         print the data to the screen/terminal
     in order to process the customers order, I will need to
+        ask for the item ID
+        ask for the desired quantity
         access the mysql table
         retrieve the specific information
             based on the id number

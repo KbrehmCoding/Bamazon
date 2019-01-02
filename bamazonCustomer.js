@@ -6,23 +6,38 @@ var connection = mysql.createConnection({
 
     port: 7000,
 
-
     user: "root",
 
     password: "",
     database: "bamazon_db"
 });
 
+var id = item_id;
+var price = price;
+var quantity = stock_quantity;
+var orderQuantity = ;
+var totalCost = price * orderQuantity;
+
+function readProducts() {
+    console.log("Complete Stock tally\n");
+    connection.query("SELECT * FROM products", function (err, results) {
+        if (err) throw err;
+        console.log(results);
+        connection.end();
+    });
+}
+}
+
 function buyItems() {
     connection.query("SELECT * FROM products", function (err, results) {
         if (err) throw err;
-            inquirer
-                .prompt({
-                    name: "id",
-                    type: "input",
-                    message: "Please enter the ID of the product you want to buy",
-                });
-        },
+        inquirer
+            .prompt({
+                name: "id",
+                type: "input",
+                message: "Please enter the ID of the product you want to buy",
+            });
+    },
         function askAmount() {
             inquirer
                 .prompt({
@@ -31,21 +46,27 @@ function buyItems() {
                     message: "How many would you like to buy?"
                 });
         })
-if(amount<stock_quantity) {
-            "UPDATE"
-        }
+    if (amount < stock_quantity) {
+        "UPDATE"
+    }
 // ok so I know that this is not what I need to do, I need to decrese the stock_quanitiy integer not delete the whole row, this is just a place holder for now
-.then(function (answer) {
-            connection.query(
-                // TODO look up how to decrement mysql using js"",
+.thenfunction updateProduct() {
+        console.log("Updating Stock\n");
+        var query = connection.query(
+            "UPDATE products SET ? WHERE ?",
+            [
                 {
-                    stock_quantity: answer.stock
+                    quantity: 100
                 },
-                function (err) {
-                    if (err) throw err;
-                    console.log("Your purchase was successfull!");
-                    start();
+                {
+                    item_id
                 }
-            );
-        }))
+            ],
+            function (err, res) {
+                console.log(res.affectedRows + " Purchase Successful!\n");
+            }
+        );
+
+        // logs the actual query being run
+        console.log(query.sql);
     }
