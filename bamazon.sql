@@ -9,39 +9,39 @@ product_name VARCHAR (50),
 department_name VARCHAR (50),
 price INTEGER (200),
 stock_quantity INTEGER (200),
-PRIMARY KEY (id)
+PRIMARY KEY (item_id)
 );
 
 USE bamazon_db;
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES (sweater, clothing, 15, 30);
+VALUES ('sweater', 'clothing', 15, 30);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES (eyeliner, makeup, 20, 60);
+VALUES ('eyeliner', 'makeup', 20, 60);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES (airpods, electronics, 150, 100);
+VALUES ('airpods', 'electronics', 150, 100);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES (sheets, bedding, 50, 20);
+VALUES ('sheets', 'bedding', 50, 20);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES (novel, books, 15, 40);
+VALUES ('novel', 'books', 15, 40);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES (earings, jewlery, 25, 30);
+VALUES ('earings', 'jewlery', 25, 30);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES (jenas, clothing, 60, 30);
+VALUES ('jeans', 'clothing', 60, 30);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES (blush, makeup, 20, 55);
+VALUES ('blush', 'makeup', 20, 55);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES (macbook pro, electronics, 1200, 10);
+VALUES ('macbook pro', 'electronics', 1200, 10);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES (duvet, bedding, 100, 15);
+VALUES ('duvet', 'bedding', 100, 15);
 
 SELECT * FROM products;
