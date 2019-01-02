@@ -10,6 +10,15 @@ type in a quantity (if it is too high you will ge t a message saying Insuffience
 after you have done this the myswl table will update the stock_quantity, to see the stock being updated be sure to open the mysql workbench before purchasing, that way you can hit the refresh to see the stock_quantity change.
 thank you.
 
+Below are screen shots of the code in action!
+
+![screen shot 2019-01-02 at 5 10 20 pm](https://user-images.githubusercontent.com/43114762/50615334-1d4c0680-0eb2-11e9-9663-5a2f295959ed.png)
+![screen shot 2019-01-02 at 5 10 38 pm](https://user-images.githubusercontent.com/43114762/50615336-1e7d3380-0eb2-11e9-9bbc-d31694cba27c.png)
+![screen shot 2019-01-02 at 5 10 54 pm](https://user-images.githubusercontent.com/43114762/50615338-2046f700-0eb2-11e9-9521-af7092abf3de.png)
+![screen shot 2019-01-02 at 5 11 12 pm](https://user-images.githubusercontent.com/43114762/50615340-2210ba80-0eb2-11e9-8f77-b3a336c7e6b8.png)
+![screen shot 2019-01-02 at 5 11 26 pm](https://user-images.githubusercontent.com/43114762/50615343-23da7e00-0eb2-11e9-823a-5205c7da710b.png)
+
+
 my thought process:
     will need variables for the product ID, stock quantity, price, order quantity, and the total cost
     in order to display all the items available for sale, I will need to
