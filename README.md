@@ -7,7 +7,7 @@ this is a command line app so you will need to navigate into the bamazonCustomer
 use the command node bamazonCustomer.js to start the program
 type in the id number for the item you want to buy
 type in a quantity (if it is too high you will ge t a message saying Insuffiencent Quantity)
-after you have done this the myswl table will update the stock_quantity
+after you have done this the myswl table will update the stock_quantity, to see the stock being updated be sure to open the mysql workbench before purchasing, that way you can hit the refresh to see the stock_quantity change.
 thank you.
 
 my thought process:
